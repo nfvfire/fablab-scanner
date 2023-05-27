@@ -1,0 +1,13 @@
+[Unit]
+Description=Scanner pour le fablab
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/scanner/scan_scraper_test.py
+Type=simple
+Restart=on-failure
+# Configures the time to wait before service is stopped forcefully.
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

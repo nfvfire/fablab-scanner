@@ -1,0 +1,14 @@
+[Unit]
+Description=JSON to XLSX Converter
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/scanner/json2xlsx.py
+Restart=always
+User=fablab
+Group=fablab
+WorkingDirectory=/opt/scanner
+
+[Install]
+WantedBy=multi-user.target
